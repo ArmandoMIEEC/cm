@@ -1,0 +1,81 @@
+#!/bin/sh
+
+if [ $1 == 2 ] 
+then
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=2"   
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=3"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=4" 
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=5"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=6"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=7"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=8"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=9"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=10"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=11"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=12"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=13"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=14"    
+    ./waf --run "scratch/second_study --duration=60 --nr_of_senders=15"    
+
+elif [ $1 == 3 ]
+then
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=1Mbps"    
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=2Mbps"     
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=3Mbps"     
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=4Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=5Mbps"     
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=6Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=7Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=8Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=9Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=10Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=11Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=12Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=13Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=14Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=15Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=16Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=17Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=18Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=19Mbps"      
+    ./waf --run "scratch/third_study --duration=60 --udp_data_rate=20Mbps"    
+
+elif [ $1 == 4 ]
+then
+    ./waf --run "scratch/fourth_study --distance=100 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=200 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=300 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=400 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=500 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=600 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=700 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=800 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=900 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1000 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1100 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1200 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1300 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1400 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1500 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1600 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1700 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1800 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=1900 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2000 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2100 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2200 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2300 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2400 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2500 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2600 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2700 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2800 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=2900 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=3000 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=3100 --duration=60"    
+    ./waf --run "scratch/fourth_study --distance=3200 --duration=60"    
+
+else
+    echo study $1 does not exist
+fi
+
