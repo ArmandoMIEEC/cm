@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+if [ $1 == 1 ] 
+then
 tshark -r 1st_Study_Distance=100m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/1/10.txt
 tshark -r 1st_Study_Distance=200m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/1/20.txt
 tshark -r 1st_Study_Distance=300m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/1/30.txt
@@ -16,6 +19,8 @@ tshark -r 1st_Study_Distance=1300m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"
 tshark -r 1st_Study_Distance=1400m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/1/140.txt
 tshark -r 1st_Study_Distance=1500m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/1/150.txt
 
+elif [ $1 == 2]
+then
 tshark -r 2nd_Study_NrOfSenders=2_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/2/22.txt
 tshark -r 2nd_Study_NrOfSenders=3_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/2/23.txt
 tshark -r 2nd_Study_NrOfSenders=4_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/2/24.txt
@@ -31,6 +36,8 @@ tshark -r 2nd_Study_NrOfSenders=13_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"
 tshark -r 2nd_Study_NrOfSenders=14_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/2/214.txt
 tshark -r 2nd_Study_NrOfSenders=15_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/2/215.txt
 
+elif [ $1 == 3 ]
+then
 tshark -r 3rd_Study_UDP_DataRate=1Mbps_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/3/31.txt
 tshark -r 3rd_Study_UDP_DataRate=2Mbps_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/3/32.txt
 tshark -r 3rd_Study_UDP_DataRate=3Mbps_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/3/33.txt
@@ -52,6 +59,8 @@ tshark -r 3rd_Study_UDP_DataRate=18Mbps_Duration=60s_Run=1-0-0.pcap -q -z io,sta
 tshark -r 3rd_Study_UDP_DataRate=19Mbps_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/3/319.txt
 tshark -r 3rd_Study_UDP_DataRate=20Mbps_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/3/320.txt
 
+elif [ $1 == 4 ]
+then
 tshark -r 4th_Study_TotalDistance=100m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/4/41.txt
 tshark -r 4th_Study_TotalDistance=200m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/4/42.txt
 tshark -r 4th_Study_TotalDistance=300m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/4/43.txt
@@ -84,3 +93,7 @@ tshark -r 4th_Study_TotalDistance=2900m_Duration=60s_Run=1-0-0.pcap -q -z io,sta
 tshark -r 4th_Study_TotalDistance=3000m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/4/430.txt
 tshark -r 4th_Study_TotalDistance=3100m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/4/431.txt
 tshark -r 4th_Study_TotalDistance=3200m_Duration=60s_Run=1-0-0.pcap -q -z io,stat,0,"tcp.len>200" >> results/4/432.txt
+
+else
+    echo study $1 does not exist
+fi
